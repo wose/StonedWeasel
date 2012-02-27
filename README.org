@@ -1,0 +1,22 @@
+#+TITLE: StonedWeasel Readme
+#+Options: num:nil
+
+* What is this?
+  At the moment this is just a playground for me to mess around with
+  SDL and OpenGL.
+
+** TODO
+*** Blender
+    - build at leas one model
+*** Model Loader ([[https://developer.valvesoftware.com/wiki/Studiomdl_Data][Studiomdl Data]])
+    - load and display mesh
+    - load and apply materials ([[http://local.wasp.uwa.edu.au/~pbourke/dataformats/mtl/][mtl]])
+    - add skeleton to mesh
+    - load animations
+    - ...
+*** Maps
+    - think about a usable map format
+    - ...
+*** Network
+    - add a client/server components using [[http://enet.bespin.org/][libenet]]
+    - ...
