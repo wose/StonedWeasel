@@ -1,4 +1,5 @@
 #include "stonedweasel.h"
+#include "vertex.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 CStonedWeasel::CStonedWeasel() {
@@ -112,11 +113,17 @@ void CStonedWeasel::OnRender() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
 
-    glBegin(GL_QUADS);
-        glColor3f(1, 0, 0); glVertex3f(0, 0, 0);
-        glColor3f(1, 1, 0); glVertex3f(100, 0, 0);
-        glColor3f(1, 0, 1); glVertex3f(100, 100, 0);
-        glColor3f(1, 1, 1); glVertex3f(0, 100, 0);
+    CVertex v1(0,0,0);
+    CVertex v2(100,0,0);
+    CVertex v3(50,100,0);
+
+    glBegin(GL_TRIANGLES);
+    glColor3f(1, 0, 0);
+    glVertex3fv(v1.getVertex3fv());
+    glColor3f(1, 1, 0);
+    glVertex3fv(v2.getVertex3fv());
+    glColor3f(1, 0, 1);
+    glVertex3fv(v3.getVertex3fv());
     glEnd();
 
     SDL_GL_SwapBuffers();
